@@ -1,0 +1,9 @@
+{
+  "php printr": {
+		"prefix": "phpprintr",
+		"body": [
+			"<?php echo '<pre>'; print_r($1); echo '</pre>'; ?>$0"
+		],
+		"description": "php printr"
+	}
+}

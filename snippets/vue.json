@@ -1,0 +1,28 @@
+{
+  "vue": {
+		"prefix": "vue",
+		"body": [
+			"<template>",
+			"  <div class='${1:app}'>",
+			"    $0",
+			"  </div>",
+			"</template>",
+			"",
+			"<script>",
+			"export default {",
+			"  data() {",
+			"    return {};",
+			"  }",
+			"};",
+			"</script>",
+			"",
+			"<style lang='postcss'>",
+			".${1:app} {",
+			"  /* place your css here */",
+			"}",
+			"</style>",
+			""
+		],
+		"description": "vue component"
+	}
+}

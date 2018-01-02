@@ -1,0 +1,92 @@
+{
+  "name": "vscode-zoro-pack",
+  "displayName": "Vscode Zoro Pack",
+  "description": "Vscode Zoro Pack",
+  "version": "0.2.0",
+  "publisher": "zyy7259",
+  "engines": {
+    "vscode": "^1.18.0"
+  },
+  "icon": "images/icon.png",
+  "scripts": {
+    "test": "node ../../node_modules/vscode/bin/test",
+    "publish-vscode": "vsce publish"
+  },
+  "categories": [
+    "Extension Packs"
+  ],
+  "activationEvents": [
+    "onCommand:extension.installCodeExtensions",
+    "onCommand:extension.updateSettingsWithoutOverride",
+    "onCommand:extension.updateSettingsWithOverride",
+    "onCommand:extension.vmutf8",
+    "onCommand:extension.vmgbk",
+    "onCommand:extension.disableHtmlFormat"
+  ],
+  "main": "./extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.installCodeExtensions",
+        "title": "zoro: install plugins"
+      },
+      {
+        "command": "extension.updateSettingsWithoutOverride",
+        "title": "zoro: update settings without override"
+      },
+      {
+        "command": "extension.updateSettingsWithOverride",
+        "title": "zoro: update settings with override"
+      },
+      {
+        "command": "extension.vmutf8",
+        "title": "zoro: Change vm charset to utf8"
+      },
+      {
+        "command": "extension.vmgbk",
+        "title": "zoro: Change vm charset to gbk"
+      },
+      {
+        "command": "extension.disableHtmlFormat",
+        "title": "zoro: disable html format"
+      }
+    ],
+    "keybindings": [
+      {
+        "key": "ctrl+cmd+p",
+        "mac": "ctrl+cmd+p",
+        "win": "alt+shift+P",
+        "linux": "alt+shift+P",
+        "command": "projectManager.listProjectsNewWindow"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "vue",
+        "path": "./snippets/vue.json"
+      },
+      {
+        "language": "html",
+        "path": "./snippets/html.json"
+      },
+      {
+        "language": "php",
+        "path": "./snippets/html.json"
+      }
+    ]
+  },
+  "extensionDependencies": [],
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "json5": "^0.5.1",
+    "lodash": "^4.17.4",
+    "shelljs": "^0.7.8",
+    "vscode": "^1.1.6"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.42",
+    "@types/node": "^7.0.43",
+    "eslint": "^4.13.1",
+    "typescript": "^2.6.1"
+  }
+}

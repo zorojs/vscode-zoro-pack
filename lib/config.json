@@ -1,0 +1,20 @@
+{
+  "extensionDependencies": [
+    "EditorConfig.EditorConfig",
+    "alefragnani.project-manager",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "joelday.docthis",
+    "luqimin.velocity",
+    "mohsen1.prettify-json",
+    "mrmlnc.vscode-stylefmt",
+    "naumovs.color-highlight",
+    "octref.vetur",
+    "qinjia.view-in-browser",
+    "robertohuertasm.vscode-icons",
+    "shinnn.stylelint",
+    "waderyan.gitblame",
+    "wayou.vscode-todo-highlight",
+    "mrmlnc.vscode-scss"
+  ]
+}
