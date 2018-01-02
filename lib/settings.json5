@@ -41,6 +41,7 @@
     "css",
     "less",
     "sass",
+    "scss",
     "postcss",
     "json"
   ],
@@ -62,7 +63,7 @@
   },
   "sync.askGistName": false,
   "sync.gist": "9747703a0c812ccc0156b3aed992658b",
-  "sync.lastUpload": "2018-01-02T04:44:28.480Z",
+  "sync.lastUpload": "2018-01-02T09:35:29.263Z",
   "sync.autoDownload": true,
   "sync.autoUpload": true,
   "sync.lastDownload": "2018-01-02T01:42:20.348Z",
