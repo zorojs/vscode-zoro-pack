@@ -1,20 +1,17 @@
 {
   "extensionDependencies": [
-    "EditorConfig.EditorConfig",
     "alefragnani.project-manager",
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
-    "joelday.docthis",
-    "luqimin.velocity",
-    "mohsen1.prettify-json",
-    "mrmlnc.vscode-stylefmt",
-    "naumovs.color-highlight",
-    "octref.vetur",
-    "qinjia.view-in-browser",
-    "robertohuertasm.vscode-icons",
     "shinnn.stylelint",
-    "waderyan.gitblame",
+    "mrmlnc.vscode-stylefmt",
+    "mohsen1.prettify-json",
+    "octref.vetur",
+    "luqimin.velocity",
+    "joelday.docthis",
+    "qinjia.view-in-browser",
     "wayou.vscode-todo-highlight",
+    "robertohuertasm.vscode-icons",
     "mrmlnc.vscode-scss"
   ]
 }
