@@ -89,15 +89,20 @@ function installCodeExtensions(cmd = 'code') {
   }
   shell.exec(`${cmd} --list-extensions`, (code, stdout, stderr) => {
     if (code === 0) {
-      const extensionInstalled = stdout.replace('\r', '').split('\n');
-      const extensionToInstall = _.difference(
+      const extensionsInstalled = stdout.replace('\r', '').split('\n');
+      const extensionsToInstall = _.difference(
         config.extensionDependencies,
-        extensionInstalled
+        extensionsInstalled
       );
-      if (extensionToInstall.length) {
-        toast(`即将安装 ${extensionToInstall.length} 个插件, 请稍候`);
-        console.log('extensionToInstall', extensionToInstall);
-        Promise.each(extensionToInstall, installCodeExtension).then(() => {
+      if (extensionsToInstall.length) {
+        toast(`即将安装 ${extensionsToInstall.length} 个插件, 请稍候`);
+        console.log('extensionToInstall', extensionsToInstall);
+        Promise.each(extensionsToInstall, extension => {
+          installCodeExtension({
+            extension,
+            cmd
+          });
+        }).then(() => {
           toast('插件全部安装完成, 请更新配置后重启 vscode 来激活插件');
         });
       } else {
@@ -107,10 +112,10 @@ function installCodeExtensions(cmd = 'code') {
   });
 }
 
-function installCodeExtension(extension) {
+function installCodeExtension({ extension, cmd }) {
   return new Promise((resolve, reject) => {
     shell.exec(
-      `code --install-extension ${extension}`,
+      `${cmd} --install-extension ${extension}`,
       (code, stdout, stderr) => {
         if (code !== 0) {
           toast('' + stderr);
