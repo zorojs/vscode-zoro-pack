@@ -28,6 +28,14 @@ function activate(context) {
   );
   context.subscriptions.push(installCodeExtensionsDisposable);
 
+  const installCodeInsidersExtensionsDisposable = vscode.commands.registerCommand(
+    'extension.installCodeInsidersExtensions',
+    () => {
+      installCodeExtensions('code-insiders');
+    }
+  );
+  context.subscriptions.push(installCodeInsidersExtensionsDisposable);
+
   const updateSettingsWithoutOverrideDisposable = vscode.commands.registerCommand(
     'extension.updateSettingsWithoutOverride',
     () => {
@@ -74,12 +82,12 @@ exports.activate = activate;
 function deactivate() {}
 exports.deactivate = deactivate;
 
-function installCodeExtensions() {
-  if (!shell.which('code')) {
+function installCodeExtensions(cmd = 'code') {
+  if (!shell.which(cmd)) {
     toast('请先安装 code 命令行工具');
     return;
   }
-  shell.exec('code --list-extensions', (code, stdout, stderr) => {
+  shell.exec(`${cmd} --list-extensions`, (code, stdout, stderr) => {
     if (code === 0) {
       const extensionInstalled = stdout.replace('\r', '').split('\n');
       const extensionToInstall = _.difference(

@@ -17,6 +17,7 @@
   ],
   "activationEvents": [
     "onCommand:extension.installCodeExtensions",
+    "onCommand:extension.installCodeInsidersExtensions",
     "onCommand:extension.updateSettingsWithoutOverride",
     "onCommand:extension.updateSettingsWithOverride",
     "onCommand:extension.vmutf8",
@@ -28,7 +29,11 @@
     "commands": [
       {
         "command": "extension.installCodeExtensions",
-        "title": "zoro: install plugins"
+        "title": "zoro: install code plugins"
+      },
+      {
+        "command": "extension.installCodeInsidersExtensions",
+        "title": "zoro: install code insiders plugins"
       },
       {
         "command": "extension.updateSettingsWithoutOverride",
