@@ -188,13 +188,7 @@ function updateSettings(options = {}) {
     // 更新
     log(`update [${key}]`, 'from', prevValue, 'to', updatedValue);
     updatedKeys.push(key);
-    let value = updatedValue;
-    if (_.isPlainObject(updatedValue)) {
-      value = _.merge({}, prevValue, updatedValue);
-    } else if (_.isArray(updatedValue)) {
-      value = [...(prevValue || []), ...updatedValue];
-    }
-    return configuration.update(key, value, target);
+    return configuration.update(key, updatedValue, target);
   });
 
   return Promise.all(promises).then(
