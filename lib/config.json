@@ -11,7 +11,6 @@
     "joelday.docthis",
     "qinjia.view-in-browser",
     "wayou.vscode-todo-highlight",
-    "robertohuertasm.vscode-icons",
-    "mrmlnc.vscode-scss"
+    "robertohuertasm.vscode-icons"
   ]
 }

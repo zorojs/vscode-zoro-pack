@@ -27,7 +27,6 @@
   "explorer.openEditors.visible": 0,
   "extensions.ignoreRecommendations": true,
   "files.associations": {
-    "*.css": "scss",
     "*.tpl": "html"
   },
   "files.autoSave": "onFocusChange",
@@ -63,10 +62,10 @@
   },
   "sync.askGistName": false,
   "sync.gist": "9747703a0c812ccc0156b3aed992658b",
-  "sync.lastUpload": "2018-01-02T09:35:29.263Z",
+  "sync.lastUpload": "2018-01-04T05:23:26.573Z",
   "sync.autoDownload": true,
   "sync.autoUpload": true,
-  "sync.lastDownload": "2018-01-02T01:42:20.348Z",
+  "sync.lastDownload": "2018-01-03T13:39:48.531Z",
   "sync.quietSync": true,
   "sync.forceDownload": false,
   "sync.anonymousGist": false,
@@ -89,6 +88,7 @@
     "**/.history/**"
   ],
   "typescript.check.npmIsInstalled": false,
+  "update.channel": "default",
   "vsicons.projectDetection.autoReload": true,
   // https://vuejs.github.io/vetur/linting-error.html
   "vetur.validation.template": false,
