@@ -3,13 +3,13 @@
   "css.validate": false,
   "scss.validate": false,
   "diffEditor.renderSideBySide": false,
+  "editor.acceptSuggestionOnEnter": "off",
   "editor.find.globalFindClipboard": false,
   "editor.fontSize": 15,
-  "editor.tabSize": 2,
-  "editor.acceptSuggestionOnEnter": "off",
-  "editor.selectionHighlight": false,
-  "editor.wordWrap": "on",
   "editor.formatOnSave": true,
+  "editor.selectionHighlight": false,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
   "emmet.includeLanguages": {
     "velocity": "html"
   },
@@ -33,19 +33,13 @@
   "files.exclude": {
     "**/.git": false
   },
-  "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
   "java.configuration.updateBuildConfiguration": "automatic",
   "prettier.disableLanguages": [
-    "css",
-    "less",
-    "sass",
-    "scss",
-    "postcss",
     "json"
   ],
   "prettier.eslintIntegration": true,
-  // disable format json
   // https://github.com/vuejs/vetur/issues/476#issuecomment-337785724
   "prettier.singleQuote": true,
   "prettier.stylelintIntegration": true,
@@ -62,10 +56,10 @@
   },
   "sync.askGistName": false,
   "sync.gist": "9747703a0c812ccc0156b3aed992658b",
-  "sync.lastUpload": "2018-01-04T05:23:26.573Z",
+  "sync.lastUpload": "2018-01-05T01:40:34.434Z",
   "sync.autoDownload": true,
   "sync.autoUpload": true,
-  "sync.lastDownload": "2018-01-03T13:39:48.531Z",
+  "sync.lastDownload": "2018-01-04T12:22:18.099Z",
   "sync.quietSync": true,
   "sync.forceDownload": false,
   "sync.anonymousGist": false,
@@ -91,6 +85,7 @@
   "update.channel": "default",
   "vsicons.projectDetection.autoReload": true,
   // https://vuejs.github.io/vetur/linting-error.html
+  // turn off and use eslint
   "vetur.validation.template": false,
   "vsicons.dontShowNewVersionMessage": true,
   "window.title": "${activeEditorMedium}${separator}${rootPath}",
@@ -98,5 +93,15 @@
   "workbench.iconTheme": "vscode-icons",
   "workbench.startupEditor": "none",
   "workbench.editor.tabSizing": "shrink",
-  "window.zoomLevel": 0
+  "window.zoomLevel": 0,
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressUpdateNotice": true,
+    "suppressWelcomeNotice": true
+  }
 }
