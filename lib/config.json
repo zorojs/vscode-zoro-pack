@@ -1,11 +1,10 @@
 {
   "extensionDependencies": [
-    "alefragnani.project-manager",
     "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode",
     "shinnn.stylelint",
-    "mrmlnc.vscode-stylefmt",
+    "esbenp.prettier-vscode",
     "mohsen1.prettify-json",
+    "alefragnani.project-manager",
     "octref.vetur",
     "luqimin.velocity",
     "joelday.docthis",
