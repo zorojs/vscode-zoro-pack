@@ -68,13 +68,13 @@ function activate(context) {
   );
   context.subscriptions.push(vmGbkDisposable);
 
-  const disableHtmlFormatDisposable = vscode.commands.registerCommand(
-    'extension.disableHtmlFormat',
+  const htmlToNunjucksDisposable = vscode.commands.registerCommand(
+    'extension.htmlToNunjucks',
     () => {
-      return disableHtmlFormat();
+      return htmlToNunjucks();
     }
   );
-  context.subscriptions.push(disableHtmlFormatDisposable);
+  context.subscriptions.push(htmlToNunjucksDisposable);
 }
 exports.activate = activate;
 
@@ -139,14 +139,16 @@ function updateVmEncoding(charset = 'utf8') {
   });
 }
 
-function disableHtmlFormat() {
+function htmlToNunjucks() {
   return updateSettings({
     override: true,
     settings: {
-      'html.format.enable': false
+      'files.associations': {
+        '*.html': 'nunjucks'
+      }
     },
     target: vscode.ConfigurationTarget.Workspace,
-    toastMsg: 'html format disabled!'
+    toastMsg: 'html highlight with nunjucks!'
   });
 }
 

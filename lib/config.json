@@ -6,10 +6,6 @@
     "mohsen1.prettify-json",
     "alefragnani.project-manager",
     "octref.vetur",
-    "luqimin.velocity",
-    "joelday.docthis",
-    "qinjia.view-in-browser",
-    "wayou.vscode-todo-highlight",
-    "robertohuertasm.vscode-icons"
+    "wayou.vscode-todo-highlight"
   ]
 }

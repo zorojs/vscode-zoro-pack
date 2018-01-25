@@ -2,7 +2,7 @@
   "name": "vscode-zoro-pack",
   "displayName": "Vscode Zoro Pack",
   "description": "Vscode Zoro Pack",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "publisher": "zyy7259",
   "engines": {
     "vscode": "^1.18.0"
@@ -22,7 +22,7 @@
     "onCommand:extension.updateSettingsWithOverride",
     "onCommand:extension.vmutf8",
     "onCommand:extension.vmgbk",
-    "onCommand:extension.disableHtmlFormat"
+    "onCommand:extension.htmlToNunjucks"
   ],
   "main": "./extension",
   "contributes": {
@@ -52,8 +52,8 @@
         "title": "zoro: Change vm charset to gbk"
       },
       {
-        "command": "extension.disableHtmlFormat",
-        "title": "zoro: disable html format"
+        "command": "extension.htmlToNunjucks",
+        "title": "zoro: highlight html with nunjucks"
       }
     ],
     "keybindings": [
