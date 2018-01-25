@@ -168,10 +168,10 @@ function updateSettings(options = {}) {
   const ignoreKeys = [];
 
   const promises = keys.map(key => {
-    let inspectTarget = 'globalValue';
-    if (target === vscode.ConfigurationTarget.Workspace) {
-      inspectTarget = 'workspaceValue';
-    }
+    const inspectTarget =
+      target === vscode.ConfigurationTarget.Workspace
+        ? 'workspaceValue'
+        : 'globalValue';
     const prevValue = configuration.inspect(key)[inspectTarget];
     const updatedValue = settings[key];
     const unchanged = _.isEqual(prevValue, updatedValue);
