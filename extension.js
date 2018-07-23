@@ -5,7 +5,7 @@ const vscode = require('vscode');
 const _ = require('lodash');
 const shell = require('shelljs');
 const Promise = require('bluebird');
-const config = require('./lib/config.json');
+const config = require('./lib/config');
 const settingsToMerge = require('./lib/settings.json5');
 const settingsToOverride = require('./lib/settings-override.json5');
 const regIgnore = require('./lib/settings-ignore');
@@ -23,18 +23,35 @@ function activate(context) {
   const installCodeExtensionsDisposable = vscode.commands.registerCommand(
     'extension.installCodeExtensions',
     () => {
-      installCodeExtensions();
+      installCodeExtensions(config.extensions);
     }
   );
   context.subscriptions.push(installCodeExtensionsDisposable);
 
+  const installCodeSyntaxExtensionsDisposable = vscode.commands.registerCommand(
+    'extension.installCodeSyntaxExtensions',
+    () => {
+      installCodeExtensions(config.syntaxExtensions);
+    }
+  );
+  context.subscriptions.push(installCodeSyntaxExtensionsDisposable);
+
   const installCodeInsidersExtensionsDisposable = vscode.commands.registerCommand(
     'extension.installCodeInsidersExtensions',
     () => {
-      installCodeExtensions('code-insiders');
+      installCodeExtensions(config.extensions, 'code-insiders');
     }
   );
   context.subscriptions.push(installCodeInsidersExtensionsDisposable);
+  context.subscriptions.push(installCodeSyntaxExtensionsDisposable);
+
+  const installCodeInsidersSyntaxExtensionsDisposable = vscode.commands.registerCommand(
+    'extension.installCodeInsidersSyntaxExtensions',
+    () => {
+      installCodeExtensions(config.syntaxExtensions, 'code-insiders');
+    }
+  );
+  context.subscriptions.push(installCodeInsidersSyntaxExtensionsDisposable);
 
   const updateSettingsWithoutOverrideDisposable = vscode.commands.registerCommand(
     'extension.updateSettingsWithoutOverride',
@@ -82,7 +99,7 @@ exports.activate = activate;
 function deactivate() {}
 exports.deactivate = deactivate;
 
-function installCodeExtensions(cmd = 'code') {
+function installCodeExtensions(extensions, cmd = 'code') {
   if (!shell.which(cmd)) {
     toast('请先安装 code 命令行工具');
     return;
@@ -90,10 +107,7 @@ function installCodeExtensions(cmd = 'code') {
   shell.exec(`${cmd} --list-extensions`, (code, stdout, stderr) => {
     if (code === 0) {
       const extensionsInstalled = stdout.replace('\r', '').split('\n');
-      const extensionsToInstall = _.difference(
-        config.extensionDependencies,
-        extensionsInstalled
-      );
+      const extensionsToInstall = _.difference(extensions, extensionsInstalled);
       if (extensionsToInstall.length) {
         toast(`即将安装 ${extensionsToInstall.length} 个插件, 请稍候`);
         console.log('extensionToInstall', extensionsToInstall);
@@ -103,9 +117,11 @@ function installCodeExtensions(cmd = 'code') {
             cmd
           });
         }).then(() => {
+          console.log('zoro, all plugins has been installed');
           toast('插件全部安装完成, 请更新配置后重启 vscode 来激活插件');
         });
       } else {
+        console.log('zoro: you already have all the plugins installed');
         toast('插件已存在, 无需安装');
       }
     }

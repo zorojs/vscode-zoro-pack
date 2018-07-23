@@ -17,7 +17,9 @@
   ],
   "activationEvents": [
     "onCommand:extension.installCodeExtensions",
+    "onCommand:extension.installCodeSyntaxExtensions",
     "onCommand:extension.installCodeInsidersExtensions",
+    "onCommand:extension.installCodeInsidersSyntaxExtensions",
     "onCommand:extension.updateSettingsWithoutOverride",
     "onCommand:extension.updateSettingsWithOverride",
     "onCommand:extension.vmutf8",
@@ -32,8 +34,16 @@
         "title": "zoro: install code plugins"
       },
       {
+        "command": "extension.installCodeSyntaxExtensions",
+        "title": "zoro: install syntax plugins"
+      },
+      {
         "command": "extension.installCodeInsidersExtensions",
         "title": "zoro: install code insiders plugins"
+      },
+      {
+        "command": "extension.installCodeInsidersSyntaxExtensions",
+        "title": "zoro: install code insiders syntax plugins"
       },
       {
         "command": "extension.updateSettingsWithoutOverride",
