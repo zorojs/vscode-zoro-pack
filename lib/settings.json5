@@ -1,15 +1,11 @@
 {
-  // https://github.com/shinnn/vscode-stylelint#usage
+  // https://github.com/shinnn/vscode-stylelint#optional-but-recommended-setup
   "css.validate": false,
+  "less.validate": false,
   "scss.validate": false,
   "diffEditor.renderSideBySide": false,
-  "editor.acceptSuggestionOnEnter": "off",
-  "editor.find.globalFindClipboard": false,
-  "editor.fontSize": 15,
   "editor.formatOnSave": true,
-  "editor.selectionHighlight": false,
   "editor.tabSize": 2,
-  "editor.wordWrap": "on",
   "emmet.includeLanguages": {
     "velocity": "html"
   },
@@ -22,12 +18,14 @@
   "eslint.validate": [
     "javascript",
     "javascriptreact",
-    "vue"
+    "vue",
+    "typescript"
   ],
-  "explorer.openEditors.visible": 0,
   "extensions.ignoreRecommendations": true,
+  "extensions.showRecommendationsOnlyOnDemand": true,
   "files.associations": {
-    "*.tpl": "html"
+    "*.tpl": "html",
+    "*.acss": "css",
   },
   "files.autoSave": "onFocusChange",
   "files.exclude": {
@@ -35,39 +33,29 @@
   },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
-  "java.configuration.updateBuildConfiguration": "automatic",
+  "jest.autoEnable": false,
+  "projectManager.treeview.visible": false,
   "prettier.disableLanguages": [
+    "velocity",
     "json"
   ],
   "prettier.eslintIntegration": true,
   // https://github.com/vuejs/vetur/issues/476#issuecomment-337785724
   "prettier.singleQuote": true,
   "prettier.stylelintIntegration": true,
+  "prettier.trailingComma": "es5",
   "search.exclude": {
     "**/.git": true,
     "**/node_modules": true,
     "**/bower_components": true,
     "**/spm_modules": true,
     "**/.history": true,
+    "**/.tea": true,
     "**/dist": true,
     "**/es": true,
     "**/dist_html": true,
     "**/_assets": true
   },
-  "sync.askGistName": false,
-  "sync.gist": "9747703a0c812ccc0156b3aed992658b",
-  "sync.lastUpload": "2018-01-05T01:40:34.434Z",
-  "sync.autoDownload": true,
-  "sync.autoUpload": true,
-  "sync.lastDownload": "2018-01-04T12:22:18.099Z",
-  "sync.quietSync": true,
-  "sync.forceDownload": false,
-  "sync.anonymousGist": false,
-  "sync.host": "",
-  "sync.pathPrefix": "",
-  "terminal.integrated.shell.osx": "/bin/zsh",
-  "terminal.integrated.fontFamily": "Meslo LG S for Powerline",
-  "terminal.integrated.fontSize": 15,
   "todohighlight.exclude": [
     "**/node_modules/**",
     "**/bower_components/**",
@@ -82,26 +70,11 @@
     "**/.history/**"
   ],
   "typescript.check.npmIsInstalled": false,
-  "update.channel": "default",
-  "vsicons.projectDetection.autoReload": true,
   // https://vuejs.github.io/vetur/linting-error.html
   // turn off and use eslint
   "vetur.validation.template": false,
-  "vsicons.dontShowNewVersionMessage": true,
   "window.title": "${activeEditorMedium}${separator}${rootPath}",
   "window.restoreWindows": "all",
-  "workbench.iconTheme": "vscode-icons",
   "workbench.startupEditor": "none",
-  "workbench.editor.tabSizing": "shrink",
-  "window.zoomLevel": 0,
-  "gitlens.advanced.messages": {
-    "suppressCommitHasNoPreviousCommitWarning": false,
-    "suppressCommitNotFoundWarning": false,
-    "suppressFileNotUnderSourceControlWarning": false,
-    "suppressGitVersionWarning": false,
-    "suppressLineUncommittedWarning": false,
-    "suppressNoRepositoryWarning": false,
-    "suppressUpdateNotice": true,
-    "suppressWelcomeNotice": true
-  }
+  "workbench.editor.tabSizing": "shrink"
 }
