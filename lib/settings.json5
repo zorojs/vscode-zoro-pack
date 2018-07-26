@@ -41,6 +41,7 @@
   ],
   "prettier.eslintIntegration": true,
   // https://github.com/vuejs/vetur/issues/476#issuecomment-337785724
+  "prettier.semi": false,
   "prettier.singleQuote": true,
   "prettier.stylelintIntegration": true,
   "prettier.trailingComma": "es5",
