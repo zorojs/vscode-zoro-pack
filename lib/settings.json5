@@ -3,7 +3,7 @@
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
-  "diffEditor.renderSideBySide": false,
+  "diffEditor.renderSideBySide": true,
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
   "emmet.includeLanguages": {
@@ -31,7 +31,6 @@
   "files.exclude": {
     "**/.git": false
   },
-  "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "jest.autoEnable": false,
   "projectManager.treeview.visible": false,
@@ -74,8 +73,6 @@
   // https://vuejs.github.io/vetur/linting-error.html
   // turn off and use eslint
   "vetur.validation.template": false,
-  "window.title": "${activeEditorMedium}${separator}${rootPath}",
   "window.restoreWindows": "all",
-  "workbench.startupEditor": "none",
-  "workbench.editor.tabSizing": "shrink"
+  "workbench.startupEditor": "none"
 }
