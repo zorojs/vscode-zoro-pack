@@ -1,4 +1,5 @@
 {
+  "breadcrumbs.enabled": true,
   // https://github.com/shinnn/vscode-stylelint#optional-but-recommended-setup
   "css.validate": false,
   "less.validate": false,
@@ -21,6 +22,7 @@
     "vue",
     "typescript"
   ],
+  "explorer.openEditors.visible": 0,
   "extensions.ignoreRecommendations": true,
   "extensions.showRecommendationsOnlyOnDemand": true,
   "files.associations": {
@@ -29,16 +31,20 @@
   },
   "files.autoSave": "onFocusChange",
   "files.exclude": {
-    "**/.git": false
+    "**/.git": false,
+    "**/.*.swp": true,
+    "**/.*.swo": true
   },
+  "files.insertFinalNewline": false,
   "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
   "jest.autoEnable": false,
-  "projectManager.treeview.visible": false,
   "prettier.disableLanguages": [
     "velocity",
     "json"
   ],
   "prettier.eslintIntegration": true,
+  "prettier.stylelintIntegration": true,
   // https://github.com/vuejs/vetur/issues/476#issuecomment-337785724
   "prettier.semi": false,
   "prettier.singleQuote": true,
@@ -55,7 +61,7 @@
     },
     "prettyhtml": {
       "printWidth": 100,
-      "singleQuote": true,
+      "singleQuote": false,
       "wrapAttributes": true,
       "sortAttributes": false
     }
@@ -72,6 +78,8 @@
     "**/dist_html": true,
     "**/_assets": true
   },
+  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.copyOnSelection": true,
   "todohighlight.exclude": [
     "**/node_modules/**",
     "**/bower_components/**",
@@ -86,9 +94,8 @@
     "**/.history/**"
   ],
   "typescript.check.npmIsInstalled": false,
-  // https://vuejs.github.io/vetur/linting-error.html
-  // turn off and use eslint
-  "vetur.validation.template": false,
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "javascript.updateImportsOnFileMove.enabled": "never",
   "window.restoreWindows": "all",
   "workbench.startupEditor": "none"
 }
