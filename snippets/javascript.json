@@ -1,0 +1,7 @@
+{
+  "ifdev": {
+    "prefix": "ifdev",
+    "body": ["if (process.env.NODE_ENV === 'development') {", "  $0", "}"],
+    "description": "if development"
+  }
+}
