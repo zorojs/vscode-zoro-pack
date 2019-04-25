@@ -1,9 +1,12 @@
 {
+  "ejs if": {
+    "prefix": "ejsif",
+    "body": ["<%_ if ($1) { _%>", "  $0", "<%_ } _%>"],
+    "description": "ejs if"
+  },
   "php printr": {
-		"prefix": "phpprintr",
-		"body": [
-			"<?php echo '<pre>'; print_r($1); echo '</pre>'; ?>$0"
-		],
-		"description": "php printr"
-	}
+    "prefix": "phpprintr",
+    "body": ["<?php echo '<pre>'; print_r($1); echo '</pre>'; ?>$0"],
+    "description": "php printr"
+  }
 }
