@@ -2,7 +2,7 @@
   "name": "vscode-zoro-pack",
   "displayName": "Vscode Zoro Pack",
   "description": "Vscode Zoro Pack",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "publisher": "zyy7259",
   "engines": {
     "vscode": "^1.18.0"

@@ -16,6 +16,7 @@
     }
   },
   "emmet.triggerExpansionOnTab": true,
+  "eslint.autoFixOnSave": false,
   "eslint.validate": [
     "javascript",
     "javascriptreact",
@@ -53,7 +54,7 @@
   // https://vuejs.github.io/vetur/linting-error.html
   // turn off template validation and use eslint
   "vetur.validation.template": false,
-  "vetur.format.defaultFormatter.js": "prettier-eslint",
+  "vetur.format.defaultFormatter.js": "prettier",
   // Options for all default formatters
   "vetur.format.defaultFormatterOptions": {
     "js-beautify-html": {
