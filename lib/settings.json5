@@ -55,6 +55,7 @@
   // turn off template validation and use eslint
   "vetur.validation.template": false,
   "vetur.format.defaultFormatter.js": "prettier",
+  "vetur.format.defaultFormatter.html": "prettier",
   // Options for all default formatters
   "vetur.format.defaultFormatterOptions": {
     "js-beautify-html": {
