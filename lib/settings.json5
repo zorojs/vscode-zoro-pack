@@ -7,15 +7,6 @@
   "diffEditor.renderSideBySide": true,
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
-  "emmet.includeLanguages": {
-    "velocity": "html"
-  },
-  "emmet.syntaxProfiles": {
-    "html": {
-      "attr_quotes": "single"
-    }
-  },
-  "emmet.triggerExpansionOnTab": true,
   "eslint.autoFixOnSave": false,
   "eslint.validate": [
     "javascript",
@@ -39,7 +30,6 @@
   "files.insertFinalNewline": false,
   "files.trimTrailingWhitespace": true,
   "files.trimFinalNewlines": true,
-  "jest.autoEnable": false,
   "prettier.disableLanguages": [
     "velocity",
     "json"
@@ -82,19 +72,6 @@
   },
   "terminal.integrated.fontSize": 15,
   "terminal.integrated.copyOnSelection": true,
-  "todohighlight.exclude": [
-    "**/node_modules/**",
-    "**/bower_components/**",
-    "**/dist/**",
-    "**/build/**",
-    "**/.vscode/**",
-    "**/.github/**",
-    "**/_output/**",
-    "**/*.min.*",
-    "**/*.map",
-    "**/.next/**",
-    "**/.history/**"
-  ],
   "typescript.check.npmIsInstalled": false,
   "typescript.updateImportsOnFileMove.enabled": "never",
   "javascript.updateImportsOnFileMove.enabled": "never",
