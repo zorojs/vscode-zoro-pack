@@ -2,7 +2,7 @@
   "name": "vscode-zoro-pack",
   "displayName": "Vscode Zoro Pack",
   "description": "Vscode Zoro Pack",
-  "version": "0.4.6",
+  "version": "0.4.7",
   "publisher": "zyy7259",
   "engines": {
     "vscode": "^1.18.0"
@@ -78,6 +78,18 @@
     "snippets": [
       {
         "language": "javascript",
+        "path": "./snippets/javascript.json"
+      },
+      {
+        "language": "javascriptreact",
+        "path": "./snippets/javascript.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./snippets/javascript.json"
+      },
+      {
+        "language": "typescriptreact",
         "path": "./snippets/javascript.json"
       },
       {
