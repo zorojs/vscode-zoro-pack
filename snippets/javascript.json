@@ -1,4 +1,9 @@
 {
+  "import": {
+    "prefix": "im",
+    "body": ["import { $0 } from '$1'"],
+    "description": "import"
+  },
   "ifdev": {
     "prefix": "ifdev",
     "body": ["if (process.env.NODE_ENV === 'development') {", "  $0", "}"],
