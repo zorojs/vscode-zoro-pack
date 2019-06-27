@@ -12,7 +12,8 @@
     "javascript",
     "javascriptreact",
     "vue",
-    "typescript"
+    "typescript",
+    "typescriptreact"
   ],
   "explorer.openEditors.visible": 0,
   "extensions.ignoreRecommendations": true,
