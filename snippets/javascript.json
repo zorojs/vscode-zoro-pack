@@ -1,7 +1,7 @@
 {
   "import": {
     "prefix": "im",
-    "body": ["import { $2 } from '$1'$0"],
+    "body": ["import { $0 } from '$1'"],
     "description": "import"
   },
   "const": {
