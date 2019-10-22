@@ -1,4 +1,9 @@
 {
+  "require": {
+    "prefix": "re",
+    "body": ["const { $0 } = require('$1')"],
+    "description": "require"
+  },
   "import": {
     "prefix": "im",
     "body": ["import { $0 } from '$1'"],
