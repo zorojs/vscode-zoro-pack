@@ -16,7 +16,7 @@
       "}",
       "</script>",
       "",
-      "<style lang=\"postcss\">",
+      "<style lang=\"postcss\" scoped>",
       ".${1:app} {",
       "  /* place your css here */",
       "}",
