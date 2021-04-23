@@ -11,7 +11,7 @@
   },
   "const": {
     "prefix": "co",
-    "body": ["const { $2 } = $1$0"],
+    "body": ["const { $0 } = $1"],
     "description": "const"
   },
   "ifdev": {
