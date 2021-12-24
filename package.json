@@ -77,6 +77,10 @@
     ],
     "snippets": [
       {
+        "language": "plaintext",
+        "path": "./snippets/html.json"
+      },
+      {
         "language": "javascript",
         "path": "./snippets/javascript.json"
       },

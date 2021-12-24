@@ -1,4 +1,15 @@
 {
+  "precode": {
+    "prefix": "precode",
+    "body": [
+      "<pre><code>",
+      "",
+      "$0",
+      "",
+      "</code></pre>"
+    ],
+    "description": "<pre><code></code></pre>"
+  },
   "ejs if": {
     "prefix": "ejsif",
     "body": ["<%_ if ($1) { _%>", "  $0", "<%_ } _%>"],
