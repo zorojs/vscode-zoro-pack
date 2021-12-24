@@ -10,7 +10,7 @@
   "icon": "images/icon.png",
   "scripts": {
     "test": "node ../../node_modules/vscode/bin/test",
-    "publish-vscode": "vsce publish"
+    "pub": "vsce publish"
   },
   "categories": [
     "Extension Packs"
