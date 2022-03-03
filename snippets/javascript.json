@@ -15,7 +15,7 @@
     "description": "const"
   },
   "test": {
-    "prefix": "test",
+    "prefix": "te",
     "body": ["test('$1', () => {", "  $0","})"],
     "description": "test"
   },
