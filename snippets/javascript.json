@@ -1,23 +1,27 @@
 {
-    "require": {
-      "prefix": "re",
-      "body": ["const { $0 } = require('$1')"],
-      "description": "require"
-    },
-    "import": {
-      "prefix": "im",
-      "body": ["import { $0 } from '$1'"],
-      "description": "import"
-    },
-    "const": {
-      "prefix": "co",
-      "body": ["const { $0 } = $1"],
-      "description": "const"
-    },
-    "ifdev": {
-      "prefix": "ifdev",
-      "body": ["if (process.env.NODE_ENV === 'development') {", "  $0", "}"],
-      "description": "if development"
-    }
+  "import": {
+    "prefix": "im",
+    "body": ["import { $0 } from '$1'"],
+    "description": "import"
+  },
+  "require": {
+    "prefix": "re",
+    "body": ["const { $0 } = require('$1')"],
+    "description": "require"
+  },
+  "const": {
+    "prefix": "co",
+    "body": ["const { $0 } = $1"],
+    "description": "const"
+  },
+  "test": {
+    "prefix": "test",
+    "body": ["test('$1', () => {", "  $0","})"],
+    "description": "test"
+  },
+  "ifdev": {
+    "prefix": "ifdev",
+    "body": ["if (process.env.NODE_ENV === 'development') {", "  $0", "}"],
+    "description": "if development"
   }
-  
+}
